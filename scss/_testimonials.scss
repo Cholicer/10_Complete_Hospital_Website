@@ -1,0 +1,57 @@
+.swiper {
+   width: $container-lg;
+
+   .swiper-wrapper {
+      .swiper-slide {
+         @include gradientBackground;
+         padding: 1.5rem 2rem;
+         border-radius: 1rem;
+         cursor: default;
+         font-size: 0.9rem;
+         margin-bottom: 4rem;
+
+         p {
+            margin-bottom: 1.5rem;
+            -webkit-line-clamp: 4;
+            /* Число отображаемых строк */
+            display: -webkit-box;
+            /* Включаем флексбоксы */
+            -webkit-box-orient: vertical;
+            /* Вертикальная ориентация */
+            overflow: hidden;
+         }
+
+         .patient{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .avatar {
+               width: 2.5rem;
+               aspect-ratio: 1/1;
+               border-radius: 50%;
+               overflow: hidden;
+            }
+
+            .patient__details {
+               transform: translateY(10%);
+            }
+         }
+      }
+   }
+
+   .swiper-pagination-bullet {
+      background: $primary-color;
+   }
+}
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ======================== */
+@media screen and (max-width: 600px) {
+   .swiper {
+      .swiper-wrapper {
+         .swiper-slide {
+            padding: 1.5rem;
+         }
+      }
+   }
+}
